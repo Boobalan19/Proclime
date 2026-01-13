@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India RCO Operational Procedures 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%);
+            padding: 40px 20px;
+            color: #1e293b;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .date-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 40px 30px;
+        }
+        
+        .section {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 28px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section:hover {
+            border-color: #0284c7;
+            box-shadow: 0 8px 24px rgba(2, 132, 199, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0284c7, #16a34a);
+            color: white;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+        }
+        
+        .section-content {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #475569;
+        }
+        
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .section-content li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .section-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+        }
+        
+        .energy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 10px 0;
+        }
+        
+        .energy-tag {
+            background: #dbeafe;
+            color: #0369a1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .excluded-section .energy-tag {
+            background: #fee2e2;
+            color: #991b1b;
+            opacity: 0.7;
+        }
+        
+        .section.excluded-section {
+            border-color: #fca5a5;
+        }
+        
+        .key-targets {
+            background: linear-gradient(135deg, #dbeafe 0%, #ecfdf5 100%);
+            border-left: 4px solid #0284c7;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+        
+        .target-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-weight: 500;
+        }
+        
+        .target-value {
+            color: #0284c7;
+            font-weight: 700;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 0;
+            gap: 10px;
+        }
+        
+        .checklist-check {
+            color: #16a34a;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .penalty-box {
+            background: #fef2f2;
+            border: 2px solid #dc2626;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0;
+            color: #7f1d1d;
+        }
+        
+        .penalty-box strong {
+            color: #dc2626;
+        }
+        
+        .footer {
+            background: #1e293b;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 24px 16px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+        
+        .icon-large {
+            width: 48px;
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🇮🇳 Renewable Consumption Obligation</h1>
+            <p>India's RCO Operational Procedures & Compliance Framework</p>
+            <div class="date-badge">January 2026 | Updated Guidelines</div>
+        </div>
+        
+        <!-- MAIN CONTENT GRID -->
+        <div class="grid">
+            
+            <!-- SECTION 1: What is RCO? -->
+            <div class="section">
+                <div class="section-number">1️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="12" fill="#0284c7" stroke="#0284c7" stroke-width="2"/>
+                        <line x1="24" y1="4" x2="24" y2="10" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="24" y1="38" x2="24" y2="44" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="4" y1="24" x2="10" y2="24" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="38" y1="24" x2="44" y2="24" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    What is RCO?
+                </h2>
+                <div class="section-content">
+                    <p style="margin-bottom: 14px;"><strong>National rule requiring a minimum % of electricity from renewable sources.</strong></p>
+                    <div class="key-targets">
+                        <div class="target-row">
+                            <span>FY 2024-25:</span>
+                            <span class="target-value">29.91%</span>
+                        </div>
+                        <div class="target-row">
+                            <span>FY 2029-30:</span>
+                            <span class="target-value">43.33%</span>
+                        </div>
+                        <small style="color: #64748b; margin-top: 8px; display: block;">Progressive increase in renewable target</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 2: Who Must Comply? -->
+            <div class="section">
+                <div class="section-number">2️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="12" width="28" height="30" stroke="#0284c7" stroke-width="2" fill="none"/>
+                        <line x1="18" y1="12" x2="18" y2="42" stroke="#0284c7" stroke-width="1"/>
+                        <line x1="26" y1="12" x2="26" y2="42" stroke="#0284c7" stroke-width="1"/>
+                        <line x1="10" y1="20" x2="38" y2="20" stroke="#0284c7" stroke-width="1"/>
+                        <line x1="10" y1="28" x2="38" y2="28" stroke="#0284c7" stroke-width="1"/>
+                    </svg>
+                    Who Must Comply?
+                </h2>
+                <div class="section-content">
+                    <ul>
+                        <li>DISCOMs (Distribution Companies)</li>
+                        <li>Large Industries (Designated Consumers)</li>
+                        <li>Captive Power Users</li>
+                        <li>Open Access Consumers</li>
+                    </ul>
+                    <p style="margin-top: 12px; font-size: 0.9rem; color: #7f1d1d; background: #fef2f2; padding: 10px; border-radius: 6px; border-left: 3px solid #dc2626;">
+                        ❌ <strong>Excluded:</strong> Thermal power plants
+                    </p>
+                </div>
+            </div>
+            
+            <!-- SECTION 3: Eligible Renewable Sources -->
+            <div class="section">
+                <div class="section-number">3️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 6C24 6 32 14 32 22C32 30 28 38 24 38C20 38 16 30 16 22C16 14 24 6 24 6Z" fill="#16a34a" stroke="#0284c7" stroke-width="2"/>
+                        <path d="M24 8V36" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Eligible Sources
+                </h2>
+                <div class="section-content">
+                    <div class="energy-grid">
+                        <div class="energy-tag">☀️ Solar</div>
+                        <div class="energy-tag">💨 Wind</div>
+                        <div class="energy-tag">💧 Hydro</div>
+                        <div class="energy-tag">🌊 PSP</div>
+                        <div class="energy-tag">🌿 Biomass</div>
+                        <div class="energy-tag">⛽ Biogas</div>
+                        <div class="energy-tag">⚫ Black Liquor</div>
+                        <div class="energy-tag">♻️ MSW/WtE</div>
+                        <div class="energy-tag">🌾 Bagasse Co-gen</div>
+                        <div class="energy-tag">🌍 Geothermal</div>
+                        <div class="energy-tag">🌊 Tidal</div>
+                        <div class="energy-tag">💚 Green H₂/NH₃</div>
+                        <div class="energy-tag">⚙️ DRE ≤10 MW</div>
+                        <div class="energy-tag">📊 RECs</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 4: Excluded from RCO -->
+            <div class="section excluded-section">
+                <div class="section-number">4️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="18" stroke="#dc2626" stroke-width="2" fill="none"/>
+                        <line x1="16" y1="16" x2="32" y2="32" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="32" y1="16" x2="16" y2="32" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    Excluded
+                </h2>
+                <div class="section-content">
+                    <div class="energy-grid">
+                        <div class="energy-tag">⚛️ Nuclear</div>
+                        <div class="energy-tag">🔥 WHR/WER</div>
+                        <div class="energy-tag">💨 By-product Gases</div>
+                        <div class="energy-tag">🔴 50% Fossil Co-gen</div>
+                        <div class="energy-tag">🔴 50% Al Smelter</div>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 0.85rem; color: #64748b;">These sources cannot be counted toward RCO targets</p>
+                </div>
+            </div>
+            
+            <!-- SECTION 5: Key DISCOM Rules -->
+            <div class="section">
+                <div class="section-number">5️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="8" width="36" height="32" stroke="#0284c7" stroke-width="2" fill="none" rx="3"/>
+                        <path d="M12 16H36" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 24H36" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 32H28" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    DISCOM Rules
+                </h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Wind, Hydro, DRE, Other RE sub-targets</li>
+                        <li>Surplus fungibility + DRE special rule</li>
+                        <li>Regional adjustments for hilly regions</li>
+                        <li>Urban area adjustments</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- SECTION 6: Reporting Requirements -->
+            <div class="section">
+                <div class="section-number">6️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="10" width="32" height="30" stroke="#0284c7" stroke-width="2" fill="none" rx="2"/>
+                        <line x1="14" y1="10" x2="14" y2="6" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="34" y1="10" x2="34" y2="6" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="8" y1="18" x2="40" y2="18" stroke="#0284c7" stroke-width="1"/>
+                        <circle cx="16" cy="26" r="2" fill="#16a34a"/>
+                        <circle cx="24" cy="26" r="2" fill="#16a34a"/>
+                        <circle cx="32" cy="26" r="2" fill="#16a34a"/>
+                    </svg>
+                    Reporting
+                </h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Quarterly:</strong> Form A</li>
+                        <li><strong>Annual:</strong> Form A, Form B, M&V Report</li>
+                        <li><strong>Compliance Window:</strong> 9 months from fiscal year-end</li>
+                    </ul>
+                    <p style="margin-top: 12px; font-size: 0.85rem; background: #dbeafe; color: #0369a1; padding: 10px; border-radius: 6px;">
+                        ℹ️ Timely submission is mandatory for compliance
+                    </p>
+                </div>
+            </div>
+            
+            <!-- SECTION 7: Penalties & Enforcement -->
+            <div class="section">
+                <div class="section-number">7️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L5 40H43L24 4Z" stroke="#dc2626" stroke-width="2" fill="none"/>
+                        <line x1="24" y1="16" x2="24" y2="28" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="24" cy="34" r="1.5" fill="#dc2626"/>
+                    </svg>
+                    Penalties
+                </h2>
+                <div class="section-content">
+                    <div class="penalty-box">
+                        <strong>Non-compliance Process:</strong><br/>
+                        SDA → SERC/JERC → Penalties<br/>
+                        <small style="opacity: 0.9;">Under EC Act, 2001 (Section 26(3))</small>
+                    </div>
+                    <ul>
+                        <li><strong>Enforcement:</strong> BEE check-verification</li>
+                        <li><strong>Covers:</strong> Failure to meet RCO, non-reporting, misreporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- SECTION 8: Next Steps -->
+            <div class="section">
+                <div class="section-number">8️⃣</div>
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="18" stroke="#16a34a" stroke-width="2" fill="none"/>
+                        <path d="M16 24L22 30L32 18" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Next Steps
+                </h2>
+                <div class="section-content">
+                    <div class="checklist-item">
+                        <span class="checklist-check">✓</span>
+                        <span>Confirm applicability to your entity</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checklist-check">✓</span>
+                        <span>Calculate baseline RE % vs target</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checklist-check">✓</span>
+                        <span>Prepare RE strategy (onsite/OA/RECs)</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checklist-check">✓</span>
+                        <span>Appoint Authorized Energy Auditor (AEA)</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checklist-check">✓</span>
+                        <span>Strengthen metering & data systems</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span class="checklist-check">✓</span>
+                        <span>Plan REC/buyout strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>📋 Renewable Consumption Obligation (RCO) - India's Path to 500 GW Non-Fossil Energy by 2030</p>
+            <p style="margin-top: 8px; opacity: 0.7; font-size: 0.85rem;">Effective January 2026 | Bureau of Energy Efficiency (BEE) - Ministry of Power</p>
+        </div>
+    </div>
+</body>
+</html>
